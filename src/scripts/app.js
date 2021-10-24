@@ -1,10 +1,17 @@
-class App {
-   constructor(test) {
-      this.test = test;
-   }
+import Chatroom from './chat';
+import ChatUI from './ui';
 
-   init() {
-      console.log(this.test);
+class App {
+   constructor() {
+      // dom queries
+      const chatList = document.querySelector('.chat-list');
+
+      // class instances
+      const chatroom = new Chatroom('general', 'reyhan');
+      const chatui = new ChatUI(chatList);
+
+      // get chats and render
+      chatroom.getChats((doc) => chatui.render(doc));
    }
 }
 

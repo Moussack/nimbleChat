@@ -1,4 +1,3 @@
-// Remember, index.js is app.js in this project
 // Import Firebase and Firestore using v9 modular
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
@@ -12,24 +11,12 @@ const firebaseConfig = {
    measurementId: 'G-H9SNQQ5KKG',
 };
 // Initialize Firebase and Firestore
-export const fb = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 export const db = getFirestore();
 
 // Initialize modules
 import './styles.css';
-import Chatroom from './scripts/chat';
-import chatUi from './scripts/ui';
+import App from './scripts/app';
 
-const chatroom = new Chatroom('gaming', 'reyhan');
-/* chatroom
-   .addChat('im a noob')
-   .then(() => {
-      console.log('chat added');
-   })
-   .catch((err) => {
-      console.log(err);
-   }); */
-
-chatroom.getChats((data) => {
-   console.log(data);
-});
+// Class instances
+new App();

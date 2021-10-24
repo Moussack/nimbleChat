@@ -48,6 +48,20 @@ class Chatroom {
          });
       });
    }
+
+   // UPDATE USERNAME
+   updateName(username) {
+      this.username = username;
+   }
+
+   // UPDATE ROOM
+   updateRoom(room) {
+      this.room = room;
+      console.log(this.room);
+      if (this.unsub) {
+         this.unsub();
+      }
+   }
 }
 
 export default Chatroom;
