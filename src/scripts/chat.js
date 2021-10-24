@@ -42,7 +42,7 @@ class Chatroom {
          snapshot.docChanges().forEach((change) => {
             const doc = change.doc.data();
             if (change.type === 'added') {
-               // *** update the ui
+               // *** render chats
                callback(doc);
             }
          });
@@ -51,11 +51,13 @@ class Chatroom {
 
    // UPDATE USERNAME
    updateName(username) {
+      // *** update
       this.username = username;
    }
 
    // UPDATE ROOM
    updateRoom(room) {
+      // *** update
       this.room = room;
       console.log(this.room);
       if (this.unsub) {
