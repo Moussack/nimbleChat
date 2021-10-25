@@ -7,6 +7,10 @@ class chatUI {
       this.list = list;
    }
 
+   clear() {
+      this.list.innerHTML = '';
+   }
+
    render(doc) {
       const when = distanceInWordsToNow(doc.created_at.toDate(), { addSuffix: true });
 

@@ -49,10 +49,11 @@ class Chatroom {
       });
    }
 
-   // UPDATE USERNAME
+   // UPDATE USERNAME AND SAVE IT TO LOCAL STORAGE
    updateName(username) {
       // *** update
       this.username = username;
+      localStorage.setItem('username', username);
    }
 
    // UPDATE ROOM
