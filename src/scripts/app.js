@@ -33,7 +33,7 @@ class App {
             });
       });
 
-      // *** get chats and render
+      // *** get chats and render asdasd
       chatroom.getChats((doc) => chatui.render(doc));
 
       // Update username
